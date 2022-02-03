@@ -1,6 +1,5 @@
 <?php
-namespace AutoRacing;
-
+namespace Bibarys;
 use pocketmine\event\Listener;
 use pocketmine\item\Item;
 use pocketmine\entity\Item as EI;
@@ -28,7 +27,7 @@ class DonateCase extends PluginBase implements Listener{
 
 	public function onEnable() : void{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->getLogger()->info("DonateCase-MGC Загружен!");
+		$this->getLogger()->info("DonateCase");
 		if(!is_dir($this->getDataFolder()))
 			@mkdir($this->getDataFolder());
 		$this->config = new Config($this->getDataFolder()."config.yml", Config::YAML, ['x' => 0, 'y' => 66, 'z' => 0]);
